@@ -3,17 +3,31 @@ package conta;
 import java.util.Scanner;
 
 import conta.util.Cores;
-
+import conta.model.Conta;
 public class Menu {
     public static void main(String[] args) {
         
-        Scanner leia = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 		
+        
+        
+        Conta c1 = new Conta(123456, 123, 1, "Maria dos Santos", 2500.0f);
+    	c1.imprimirInfo();
+    
+    	Conta c2 = new Conta(123456, 123, 1, "João da Silva", 2000.0f);
+    	c2.imprimirInfo();
+    
+    	c1.setSaldo(100000.0f);
+    	c1.setTitular("Maria Joaquina");
+    	c1.imprimirInfo();
+        
+        
+        
 		int opcao;
 				
 		while(true) {
 
-			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND
+			System.out.println(Cores.TEXT_RED_BRIGHT + Cores.ANSI_BLACK_BACKGROUND
 					+ "*****************************************************");
 			System.out.println("                                                     ");
 			System.out.println("                BANCO DO BRAZIL COM Z                ");
@@ -34,12 +48,12 @@ public class Menu {
 			System.out.println("Entre com a opção desejada:                          ");
 			System.out.println("                                                     " + Cores.TEXT_RESET);
 			
-			opcao = leia.nextInt();
+			opcao = sc.nextInt();
 				
 			if (opcao == 9) {
 				System.out.println(Cores.TEXT_WHITE_BOLD + "\nBanco do Brazil com Z - O seu Futuro começa aqui!");
 				sobre();
-				leia.close();
+				sc.close();
 				System.exit(0);
 			}
 				
