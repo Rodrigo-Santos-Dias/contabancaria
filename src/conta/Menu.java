@@ -16,7 +16,7 @@ public class Menu {
 				
 		while(true) {
 
-			System.out.println(Cores.TEXT_RED_BRIGHT + Cores.ANSI_BLACK_BACKGROUND
+			System.out.println(Cores.TEXT_BLUE_UNDERLINED + Cores.ANSI_BLACK_BACKGROUND
 					+ "*****************************************************");
 			System.out.println("                                                     ");
 			System.out.println("                BANCO DO BRAZIL COM Z                ");
