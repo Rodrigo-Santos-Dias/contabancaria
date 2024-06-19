@@ -2,22 +2,22 @@ package conta.model;
  	
 public class ContaCorrente extends Conta{
 
-	private float limite;
+	private double limite;
 
-	public ContaCorrente(int numero, int agencia, int tipo, String titular, float saldo, float limite) {
+	public ContaCorrente(int numero, int agencia, int tipo, String titular, double saldo, double limite) {
 			super(numero, agencia, tipo, titular, saldo);
 			this.limite = limite;
 	}
 
-	public float getLimite() {
+	public double getLimite() {
 		return limite;
 	}
 
-	public void setLimite(float limite) {
+	public void setLimite(double limite) {
 		this.limite = limite;
 	}
 	@Override
-	public boolean sacar(float valor) { 
+	public boolean sacar(double valor) { 
 		
 		if(this.getSaldo() + this.getLimite() < valor) {
 			System.out.println("\n Saldo Insuficiente!");

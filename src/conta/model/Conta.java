@@ -5,9 +5,9 @@ public abstract class Conta {
 	private int agencia;
 	private int tipo;
 	private String titular;
-	private float saldo;
+	private double saldo;
 	
-	public Conta(int numero, int agencia, int tipo, String titular, float saldo) {
+	public Conta(int numero, int agencia, int tipo, String titular, double saldo) {
 		this.numero = numero;
 		this.agencia = agencia;
 		this.tipo = tipo;
@@ -47,15 +47,15 @@ public abstract class Conta {
 		this.titular = titular;
 	}
 
-	public float getSaldo() {
+	public double getSaldo() {
 		return saldo;
 	}
 
-	public void setSaldo(float saldo) {
+	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
 	
-public boolean sacar(float valor) {
+public boolean sacar(double valor) {
 		
 		if(this.getSaldo() < valor) {
 			System.out.println("Saldo Insuficiente!");
@@ -67,7 +67,7 @@ public boolean sacar(float valor) {
 		
 	}
 	
-	public void depositar(float valor) {
+	public void depositar(double valor) {
 		this.setSaldo(this.getSaldo() + valor);
 	}
 	
